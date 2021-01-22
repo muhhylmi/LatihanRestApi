@@ -1,0 +1,24 @@
+{
+  "name": "latihanrestapi",
+  "version": "1.0.0",
+  "description": "Aplikasi latiha rest api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhhylmi/LatihanRestApi.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[\u001b[C"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhhylmi/LatihanRestApi/issues"
+  },
+  "homepage": "https://github.com/muhhylmi/LatihanRestApi#readme"
+}
