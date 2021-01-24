@@ -15,28 +15,28 @@ exports.registrasi = function (req, res) {
     role: req.body.role,
     tanggal_daftar: new Date(),
   };
-  var query = "select email from ?? where ??";
+  var query = "select email from ?? where ??=?";
   var table = ["user", "email", post.email];
 
   query = mysql.format(query, table);
 
-  connection.query(query, function (error, rows) {
+  connection.query(query, post, function (error, rows) {
     if (error) {
       console.log(error);
     } else {
-      if (rows.length == 0) {
-        var query = "insert into ?? set ??";
+      if (rows.length === 0) {
+        var query = "insert into ?? set ?";
         var table = ["user"];
         query = mysql.format(query, table);
-        connection.query(query, function (error, rows) {
+        connection.query(query, post, function (error, rows) {
           if (error) {
             console.log(error);
           } else {
-            response.ok("Berhasil Menambahkan User Baru");
+            response.ok("Berhasil Menambahkan User Baru", res);
           }
         });
       } else {
-        response.ok("email sudah terdaftar!");
+        response.ok("email sudah terdaftar!", res);
       }
     }
   });
