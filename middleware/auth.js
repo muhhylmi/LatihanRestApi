@@ -61,6 +61,8 @@ exports.login = function (req, res) {
           expiresIn: 1440,
         });
         id_user = rows[0].user_id;
+        username = rows[0].username;
+
         var data = {
           id_user: id_user,
           access_token: token,
@@ -79,6 +81,7 @@ exports.login = function (req, res) {
               message: "token JWT tergenerate",
               token: token,
               currUser: data.id_user,
+              user: username,
             });
           }
         });
