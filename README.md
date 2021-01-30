@@ -1,2 +1,2 @@
 # LatihanRestApi
-Latihan membuat app dengan rest api
+Latihan membuat app rest api dengan Node dan Express JS
