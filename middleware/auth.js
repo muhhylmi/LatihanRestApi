@@ -98,3 +98,14 @@ exports.login = function (req, res) {
 exports.halamanRahasia = function (req, res) {
   response.ok("Halaman ini hanya untuk role = 2", res);
 };
+
+//menmpilkan seluruh data mahasiswa
+exports.adminMahasiswa = function (req, res) {
+  connection.query("select * from mahasiswa", function (error, rows, fileds) {
+    if (error) {
+      console.log(error);
+    } else {
+      response.ok(rows, res);
+    }
+  });
+};
